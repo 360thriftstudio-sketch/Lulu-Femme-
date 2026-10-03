@@ -9,7 +9,7 @@ const base =
   "inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-full font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60";
 const variants: Record<Variant, string> = {
   primary: "bg-pink text-on-pink hover:bg-pink-hover",
-  secondary: "border-2 border-pink bg-transparent text-pink-ink hover:bg-blush",
+  secondary: "btn-fill border-2 border-pink bg-transparent text-pink-ink",
   ghost: "bg-transparent text-ink hover:bg-blush",
   /* For dark (plum) backgrounds */
   inverse: "bg-offwhite text-plum hover:bg-blush",

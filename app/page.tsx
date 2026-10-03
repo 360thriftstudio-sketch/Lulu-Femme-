@@ -1,11 +1,10 @@
 import Link from "next/link";
-import { BundleCard } from "@/components/bundles/BundleCard";
 import { CtaBand } from "@/components/CtaBand";
 import { HeroBanner } from "@/components/HeroBanner";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { BoxIcon, CheckIcon, ShieldIcon, StarIcon, VideoIcon } from "@/components/layout/Icons";
 import { Accordion } from "@/components/ui/Accordion";
-import { bundles, getBundle, totalPieces, type Bundle } from "@/data/bundles";
+import { bundles, totalPieces } from "@/data/bundles";
 import { faqs } from "@/lib/faq";
 
 const trust = [
@@ -34,7 +33,6 @@ const steps = [
 ];
 
 export default function HomePage() {
-  const featured = ["lf-01", "lf-06", "lf-10"].map((s) => getBundle(s)).filter(Boolean) as Bundle[];
   const stats = [
     { value: String(bundles.length), label: "Exact bundles live" },
     { value: totalPieces().toLocaleString("en-GB"), label: "Pieces in stock" },
@@ -62,40 +60,28 @@ export default function HomePage() {
         ]}
       />
 
-      {/* 2. Trust bar */}
-      <section aria-label="Why buy from Lulu Femme" className="border-y border-line bg-card">
-        <ul className="container-site grid grid-cols-2 gap-6 py-8 lg:grid-cols-4">
+      {/* 2. Trust bar: compact; swipes sideways on mobile */}
+      <section
+        aria-label="Why buy from Lulu Femme"
+        className="border-b border-line bg-card py-4 md:py-5"
+      >
+        <ul
+          tabIndex={0}
+          aria-label="Why buy from Lulu Femme (swipe for more)"
+          className="no-scrollbar container-site flex snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto md:grid md:grid-cols-4 md:gap-4 md:overflow-visible"
+        >
           {trust.map(({ icon: Icon, title, text }) => (
-            <li key={title} className="flex items-start gap-3">
-              <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blush text-pink-ink">
-                <Icon className="h-6 w-6" />
+            <li
+              key={title}
+              className="flex w-[68%] shrink-0 snap-start items-center gap-2.5 rounded-xl border border-line bg-offwhite px-3 py-2.5 md:w-auto"
+            >
+              <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blush text-pink-ink">
+                <Icon className="h-4 w-4" />
               </span>
-              <span>
-                <span className="block font-bold text-plum">{title}</span>
-                <span className="block text-sm text-ink">{text}</span>
+              <span className="min-w-0">
+                <span className="block text-sm leading-tight font-bold text-plum">{title}</span>
+                <span className="block text-xs text-ink">{text}</span>
               </span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* 3. Featured bundles */}
-      <section aria-labelledby="featured-title" className="container-site py-14 md:py-20">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-          <h2 id="featured-title" className="display text-4xl text-plum md:text-5xl">
-            Featured bundles
-          </h2>
-          <Link
-            href="/bundles"
-            className="inline-flex min-h-11 items-center font-semibold text-pink-ink underline underline-offset-4"
-          >
-            See all {bundles.length} bundles
-          </Link>
-        </div>
-        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((b) => (
-            <li key={b.slug}>
-              <BundleCard bundle={b} />
             </li>
           ))}
         </ul>

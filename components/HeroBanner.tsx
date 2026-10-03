@@ -21,16 +21,13 @@ export interface HeroBannerProps {
   headline: string;
   subline: string;
   buttons: HeroButton[];
-  /** Where the whole banner links to on mobile (image only). */
-  mobileHref?: string;
-  mobileLabel?: string;
 }
 
 /**
  * Full-width hero. Art-directed <picture>: the browser downloads only the
  * image for the current screen (desktop ≥768px, mobile below).
- * Mobile shows the image only (one big link); the headline stays in the HTML
- * as a visually hidden <h1>. Desktop shows headline, subline and buttons.
+ * Mobile shows a small headline and the buttons; desktop adds the subline.
+ * Text is pink on a soft cream fade so it stays readable on the photo.
  * Built as a single slide so it can later be wrapped in a slider.
  */
 export function HeroBanner({
@@ -40,8 +37,6 @@ export function HeroBanner({
   headline,
   subline,
   buttons,
-  mobileHref = "/bundles",
-  mobileLabel = "Shop Lulu Femme bundles",
 }: HeroBannerProps) {
   const common = { alt, priority: true, quality: 82 } as const;
   const {
@@ -72,37 +67,30 @@ export function HeroBanner({
         />
       </picture>
 
-      {/* Desktop: left-side gradient for text contrast */}
+      {/* Soft cream fade behind the text: from the bottom on mobile, from the left on desktop */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-[5] hidden bg-[linear-gradient(90deg,rgba(0,0,0,0.62)_0px,rgba(0,0,0,0.55)_620px,rgba(0,0,0,0)_900px)] md:block lg:bg-[linear-gradient(90deg,rgba(0,0,0,0.62)_0px,rgba(0,0,0,0.55)_780px,rgba(0,0,0,0)_1120px)]"
+        className="absolute inset-0 -z-[5] bg-[linear-gradient(0deg,rgba(252,254,241,0.97)_0%,rgba(252,254,241,0.92)_32%,rgba(252,254,241,0)_58%)] md:bg-[linear-gradient(90deg,rgba(252,254,241,0.94)_0px,rgba(252,254,241,0.88)_620px,rgba(252,254,241,0)_950px)] lg:bg-[linear-gradient(90deg,rgba(252,254,241,0.94)_0px,rgba(252,254,241,0.88)_780px,rgba(252,254,241,0)_1150px)]"
       />
 
-      {/* Mobile: the whole banner is one link */}
-      <Link
-        href={mobileHref}
-        aria-label={mobileLabel}
-        className="absolute inset-0 focus-visible:outline-offset-[-6px] md:hidden"
-      />
-
-      <div className="absolute inset-x-0 bottom-0 md:pb-16 lg:pb-20">
+      <div className="absolute inset-x-0 bottom-0 pb-6 md:pb-16 lg:pb-20">
         <div className="container-site">
           <div className="md:max-w-[500px] lg:max-w-[620px]">
             <h1
               id="hero-title"
-              className="hero-fade sr-only text-white md:not-sr-only md:text-[3.25rem] md:leading-[1.02] md:font-bold md:tracking-[-0.03em] lg:text-[4.5rem]"
+              className="hero-fade text-[1.75rem] leading-[1.05] font-bold tracking-[-0.03em] text-[#E3165B] md:text-[3.25rem] md:leading-[1.02] lg:text-[4.5rem]"
             >
               {headline}
             </h1>
-            <p className="hero-fade hero-delay-1 mt-4 hidden text-2xl leading-snug text-white md:block">
+            <p className="hero-fade hero-delay-1 mt-4 hidden text-2xl leading-snug font-medium text-[#C8104F] md:block">
               {subline}
             </p>
-            <div className="hero-fade hero-delay-2 mt-8 hidden flex-wrap gap-3 md:flex">
+            <div className="hero-fade hero-delay-2 mt-4 flex flex-wrap gap-2.5 md:mt-8 md:gap-3">
               {buttons.map((b) => (
                 <Link
                   key={b.href}
                   href={b.href}
-                  className="inline-flex h-12 items-center rounded-full bg-[#FBF7F8] px-7 text-base font-semibold text-[#2A1320] transition-colors duration-200 hover:bg-[#E3165B] hover:text-white focus-visible:outline-white"
+                  className="btn-fill inline-flex h-11 items-center rounded-full border-2 border-[#E3165B] bg-[#FBF7F8] px-5 text-sm font-semibold text-[#2A1320] md:h-12 md:px-7 md:text-base"
                 >
                   {b.label}
                 </Link>
