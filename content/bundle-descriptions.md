@@ -2,18 +2,18 @@
 
 All bundles: Lululemon only, Grade A (Premium), Exact Bundle.
 
-| Code | Listing name | Pcs | Items |
-|---|---|---|---|
-| LF-01 | Align Collection Mix | 20 | Tops 3, Define Jacket 1, Leggings 6, Flare 3, Capri 3, Jogger 1, Shorts 3 |
-| LF-02 | Align Collection Mix | 25 | Tops 3, Define Jacket 1, Leggings 9, Flare 3, Capri 4, Shorts 3, Jogger 2 |
-| LF-03 | Leggings Mix | 15 | Align 6, Mix 6, Flare 2, Jogger 1 |
-| LF-04 | Leggings Mix | 20 | Align 6, Mix 10, Flare 3, Jogger 1 |
-| LF-05 | Leggings Mix | 25 | Align 8, Mix 10, Flare 4, Jogger 3 |
-| LF-06 | Leggings Mix | 15 | Align 8, Mix 6, Flare 1 |
-| LF-07 | Lulu Collection Mix | 20 | Tops: Align Top 1, Swiftly Top 1, Bra 1, Mix Tank Top 2, T-Shirt 1, Sweatshirt 1, Define Jacket 1. Bottoms: Align Short 1, Hotty Hot Short 1, Speed Up Short 1, Align Capri 1, Mix Capri 1, Mix Flare 1, Mix Trouser 1, Align Leggings 2, Mix Leggings 3 |
-| LF-08 | Lulu Collection Mix | 25 | As LF-07 but Mix Tank Top 3, Mix Flare 2, Mix Trouser 2, Mix Leggings 5 |
-| LF-09 | Lulu Collection Mix | 25 | Same as LF-08 |
-| LF-10 | Lulu Mix | 50 | Tops: Align Top 1, Swiftly Top 3, Bra 3, Mix Tank Top 5, T-Shirt 3, Sweatshirt 2, Define Jacket 1, Scuba Jacket 1, Mix Jacket 1. Bottoms: Align Short 1, Hotty Hot Short 2, Speed Up Short 2, Align Capri 2, Mix Capri 2, Mix Flare 3, Mix Trouser 3, Align Leggings 5, Mix Leggings 10 |
+| Code  | Listing name         | Pcs | Items                                                                                                                                                                                                                                                                                   |
+| ----- | -------------------- | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| LF-01 | Align Collection Mix | 20  | Tops 3, Define Jacket 1, Leggings 6, Flare 3, Capri 3, Jogger 1, Shorts 3                                                                                                                                                                                                               |
+| LF-02 | Align Collection Mix | 25  | Tops 3, Define Jacket 1, Leggings 9, Flare 3, Capri 4, Shorts 3, Jogger 2                                                                                                                                                                                                               |
+| LF-03 | Leggings Mix         | 15  | Align 6, Mix 6, Flare 2, Jogger 1                                                                                                                                                                                                                                                       |
+| LF-04 | Leggings Mix         | 20  | Align 6, Mix 10, Flare 3, Jogger 1                                                                                                                                                                                                                                                      |
+| LF-05 | Leggings Mix         | 25  | Align 8, Mix 10, Flare 4, Jogger 3                                                                                                                                                                                                                                                      |
+| LF-06 | Leggings Mix         | 15  | Align 8, Mix 6, Flare 1                                                                                                                                                                                                                                                                 |
+| LF-07 | Lulu Collection Mix  | 20  | Tops: Align Top 1, Swiftly Top 1, Bra 1, Mix Tank Top 2, T-Shirt 1, Sweatshirt 1, Define Jacket 1. Bottoms: Align Short 1, Hotty Hot Short 1, Speed Up Short 1, Align Capri 1, Mix Capri 1, Mix Flare 1, Mix Trouser 1, Align Leggings 2, Mix Leggings 3                                |
+| LF-08 | Lulu Collection Mix  | 25  | As LF-07 but Mix Tank Top 3, Mix Flare 2, Mix Trouser 2, Mix Leggings 5                                                                                                                                                                                                                 |
+| LF-09 | Lulu Collection Mix  | 25  | Same as LF-08                                                                                                                                                                                                                                                                           |
+| LF-10 | Lulu Mix             | 50  | Tops: Align Top 1, Swiftly Top 3, Bra 3, Mix Tank Top 5, T-Shirt 3, Sweatshirt 2, Define Jacket 1, Scuba Jacket 1, Mix Jacket 1. Bottoms: Align Short 1, Hotty Hot Short 2, Speed Up Short 2, Align Capri 2, Mix Capri 2, Mix Flare 3, Mix Trouser 3, Align Leggings 5, Mix Leggings 10 |
 
 All item totals verified against piece counts.
 

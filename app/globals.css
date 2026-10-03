@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Lulu Femme design tokens
+   Light values first, dark-mode versions under prefers-color-scheme.
+---------------------------------------------------------------- */
+:root {
+  --pink: #e3165b; /* main accent, buttons (white text 4.63:1) */
+  --pink-hover: #c8104f;
+  --pink-ink: #c8104f; /* pink text on blush/tinted areas (4.89:1) */
+  --on-pink: #ffffff;
+  --plum: #8e2550; /* headings, labels */
+  --ink: #2a1320; /* body text */
+  --muted: #6b5560; /* secondary text */
+  --blush: #fce7ef; /* tinted sections */
+  --offwhite: #fcfef1; /* page background */
+  --card: #ffffff;
+  --line: #ecdde4;
+  --line-strong: #8a7280; /* form borders, 3:1 non-text contrast */
+  --success: #17663a;
+  --danger: #b3123f;
+  --header-bg: rgb(255 255 255 / 0.85);
+  --shadow: 0 6px 24px -12px rgb(42 19 32 / 0.25);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pink: #ff5c8f;
+    --pink-hover: #ff7aa4;
+    --pink-ink: #ff7aa4;
+    --on-pink: #1a0d14;
+    --plum: #f3a6c3;
+    --ink: #f6eaf0;
+    --muted: #c9b3be;
+    --blush: #2a1822;
+    --offwhite: #1a0d14;
+    --card: #24141d;
+    --line: #3d2a34;
+    --line-strong: #9a8290;
+    --success: #6fd49a;
+    --danger: #ff8fb0;
+    --header-bg: rgb(26 13 20 / 0.85);
+    --shadow: 0 6px 24px -12px rgb(0 0 0 / 0.6);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-pink: var(--pink);
+  --color-pink-hover: var(--pink-hover);
+  --color-pink-ink: var(--pink-ink);
+  --color-on-pink: var(--on-pink);
+  --color-plum: var(--plum);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-blush: var(--blush);
+  --color-offwhite: var(--offwhite);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-anton), Impact, "Arial Narrow", sans-serif;
+
+  --shadow-soft: var(--shadow);
+}
+
+@theme {
+  --breakpoint-xs: 375px;
+  --breakpoint-2xl: 1440px;
+}
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--offwhite);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible pink focus ring everywhere */
+:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) {
+    .container-site {
+      padding-inline: 1.5rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    .container-site {
+      padding-inline: 2rem;
+    }
+  }
+  .display {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+  }
+  .prose-lf p {
+    margin-block: 0.75rem;
+    line-height: 1.7;
+  }
+  .prose-lf ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-block: 0.75rem;
+  }
+  .prose-lf li {
+    margin-block: 0.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
