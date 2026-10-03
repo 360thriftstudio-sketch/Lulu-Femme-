@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { BundleCard } from "@/components/bundles/BundleCard";
 import { CtaBand } from "@/components/CtaBand";
+import { HeroBanner } from "@/components/HeroBanner";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { BoxIcon, CheckIcon, ShieldIcon, StarIcon, VideoIcon } from "@/components/layout/Icons";
 import { Accordion } from "@/components/ui/Accordion";
-import { ButtonLink } from "@/components/ui/Button";
 import { bundles, getBundle, totalPieces, type Bundle } from "@/data/bundles";
 import { faqs } from "@/lib/faq";
 
@@ -35,7 +34,6 @@ const steps = [
 ];
 
 export default function HomePage() {
-  const hero = getBundle("lf-02")!;
   const featured = ["lf-01", "lf-06", "lf-10"].map((s) => getBundle(s)).filter(Boolean) as Bundle[];
   const stats = [
     { value: String(bundles.length), label: "Exact bundles live" },
@@ -47,45 +45,22 @@ export default function HomePage() {
   return (
     <>
       {/* 1. Hero */}
-      <section className="container-site grid items-center gap-10 pt-4 pb-12 md:grid-cols-2 md:pt-8 lg:gap-16">
-        <div className="flex flex-col items-start gap-6">
-          <p className="rounded-full bg-blush px-3 py-1 text-sm font-bold tracking-wider text-pink-ink uppercase">
-            Wholesale for resellers
-          </p>
-          <h1 className="display text-5xl text-plum xs:text-[3.4rem] lg:text-7xl">
-            Grade A pre-owned Lululemon, sold in exact bundles
-          </h1>
-          <p className="max-w-lg text-lg text-ink">
-            Restock your Vinted, Depop, eBay or boutique with hand-authenticated Align, leggings and
-            mixed bundles. Every bundle is filmed, so you know exactly what you&apos;re buying.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <ButtonLink href="/bundles">Shop bundles</ButtonLink>
-            <ButtonLink href="/custom-orders" variant="secondary">
-              Request a custom bundle
-            </ButtonLink>
-          </div>
-        </div>
-        <div className="relative mx-auto w-full max-w-md md:max-w-none">
-          <div className="relative aspect-[1173/1341] overflow-hidden rounded-3xl border border-line bg-blush shadow-soft">
-            <Image
-              src={hero.image}
-              alt="Align Collection Mix bundle LF-02: 25 pre-owned Lululemon pieces including a red Define Jacket, leggings, shorts and a bra"
-              fill
-              priority
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <Link
-            href={`/bundles/${hero.slug}`}
-            className="absolute -bottom-4 left-4 inline-flex min-h-11 items-center gap-2 rounded-full bg-card px-4 py-2 text-sm font-semibold text-ink shadow-soft hover:text-pink-ink"
-          >
-            <span className="display text-pink-ink">{hero.code}</span> {hero.pieces} pcs · View
-            bundle
-          </Link>
-        </div>
-      </section>
+      <HeroBanner
+        desktopImage={{
+          src: "/hero/hero-desktop.webp",
+          width: 1942,
+          height: 809,
+          focal: "66% 20%",
+        }}
+        mobileImage={{ src: "/hero/hero-mobile.webp", width: 1145, height: 1374, focal: "50% 15%" }}
+        alt="Lulu Femme pre-loved activewear [EDIT]"
+        headline="Pre-loved, perfectly curated."
+        subline="Grade A Lululemon, hand-checked and ready for a second life."
+        buttons={[
+          { label: "Shop Bundles", href: "/bundles" },
+          { label: "How It Works", href: "/how-it-works" },
+        ]}
+      />
 
       {/* 2. Trust bar */}
       <section aria-label="Why buy from Lulu Femme" className="border-y border-line bg-card">
