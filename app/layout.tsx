@@ -50,11 +50,22 @@ const organization = {
   logo: `${site.url}/brand/logo-icon.png`,
   email: site.email,
   sameAs: [site.instagramUrl],
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Birmingham",
-    addressCountry: "GB",
-  },
+  address: [
+    {
+      "@type": "PostalAddress",
+      streetAddress: "27 Ferndown Close",
+      addressLocality: "Birmingham",
+      postalCode: "B26 2BT",
+      addressCountry: "GB",
+    },
+    {
+      "@type": "PostalAddress",
+      streetAddress:
+        "Plot# A-134, Philibhit Cooperative Housing Society, Scheme 33, Near Super Highway",
+      addressLocality: "Karachi",
+      addressCountry: "PK",
+    },
+  ],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

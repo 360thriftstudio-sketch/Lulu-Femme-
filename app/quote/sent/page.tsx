@@ -13,8 +13,8 @@ export default function QuoteSentPage() {
       <p className="text-sm font-bold tracking-widest text-pink-ink uppercase">Request sent</p>
       <h1 className="display text-5xl text-plum md:text-6xl">Thank you!</h1>
       <p className="max-w-xl text-lg text-ink">
-        We&apos;ve received your quote request and will reply by email, usually within 1 working
-        day. [EDIT] Keep an eye on your inbox (and spam folder).
+        We&apos;ve received your quote request and will reply within one working day. Keep an eye on
+        your inbox (and spam folder).
       </p>
       <div className="flex flex-wrap gap-3">
         <ButtonLink href="/bundles">Keep browsing</ButtonLink>

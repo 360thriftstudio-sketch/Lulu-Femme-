@@ -11,7 +11,21 @@ export const site = {
   email: "lulufemmee@gmail.com",
   instagramHandle: "lulufemmee",
   instagramUrl: "https://www.instagram.com/lulufemmee/",
-  location: "Birmingham, UK",
+  location: "Birmingham, UK & Karachi, Pakistan",
+  addresses: [
+    {
+      label: "United Kingdom",
+      lines: ["27 Ferndown Close", "Birmingham B26 2BT", "United Kingdom"],
+    },
+    {
+      label: "Pakistan",
+      lines: [
+        "Plot# A-134, Philibhit Cooperative Housing Society",
+        "Scheme 33, Near Super Highway",
+        "Karachi, Pakistan",
+      ],
+    },
+  ],
   disclaimer:
     "Lulu Femme is an independent reseller of pre-owned lululemon products and is not affiliated with, endorsed by or sponsored by lululemon athletica inc.",
 };

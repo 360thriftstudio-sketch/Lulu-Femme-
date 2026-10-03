@@ -19,7 +19,18 @@ export function Footer() {
           <p className="max-w-sm text-sm text-ink">
             Grade A pre-owned Lululemon, sold wholesale in exact, filmed bundles for resellers.
           </p>
-          <p className="text-sm font-semibold text-plum">{site.location}</p>
+          <div className="grid gap-4 text-sm sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
+            {site.addresses.map((a) => (
+              <address key={a.label} className="text-ink not-italic">
+                <span className="block font-semibold text-plum">{a.label}</span>
+                {a.lines.map((l) => (
+                  <span key={l} className="block">
+                    {l}
+                  </span>
+                ))}
+              </address>
+            ))}
+          </div>
           <div className="flex flex-col gap-1 text-sm">
             <TrackedLink
               event="click_email"

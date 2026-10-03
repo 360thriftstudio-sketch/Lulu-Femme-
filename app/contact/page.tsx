@@ -44,7 +44,7 @@ export default function ContactPage() {
       <PageHeader
         crumbs={[{ label: "Contact" }]}
         title="Contact us"
-        intro="Questions about a bundle, a combined deal or a custom order? Message us – we usually reply within 1 working day. [EDIT]"
+        intro="Have a question about a bundle, sizes or shipping? Message us on Instagram or by email, and we'll reply within one working day."
       />
       <div className="container-site grid gap-6 py-10 md:grid-cols-2">
         {channels.map(({ icon: Icon, ...c }) => (
@@ -75,11 +75,30 @@ export default function ContactPage() {
             </div>
           </section>
         ))}
-        <p className="text-ink md:col-span-2">
-          <strong className="text-plum">Location:</strong> {site.location}. We&apos;re an online
-          wholesaler – visits by appointment only. [EDIT]
+        <p className="text-lg text-ink md:col-span-2">
+          We&apos;re here to help. Whether it&apos;s a question about a bundle, a combined deal or a
+          custom order, get in touch and we&apos;ll get back to you within one working day.
         </p>
       </div>
+      <section aria-labelledby="addresses-title" className="container-site pb-6">
+        <h2 id="addresses-title" className="display mb-5 text-3xl text-plum">
+          Where we&apos;re based
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          {site.addresses.map((a) => (
+            <div key={a.label} className="rounded-2xl border border-line bg-card p-6">
+              <h3 className="text-xl font-bold text-plum">{a.label}</h3>
+              <address className="mt-2 text-ink not-italic">
+                {a.lines.map((l) => (
+                  <span key={l} className="block">
+                    {l}
+                  </span>
+                ))}
+              </address>
+            </div>
+          ))}
+        </div>
+      </section>
       <CtaBand />
     </>
   );

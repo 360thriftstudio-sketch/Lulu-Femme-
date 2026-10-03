@@ -108,7 +108,7 @@ export function QuoteForm() {
       aria-describedby="quote-form-note"
     >
       <p id="quote-form-note" className="text-sm text-muted md:col-span-2">
-        Fields marked * are required. We reply by email, usually within 1 working day. [EDIT]
+        Fields marked * are required. We&apos;ll reply within one working day.
       </p>
       <Input
         id="name"
