@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Lulu Femme by email or Instagram about wholesale Lululemon bundles. Based in Birmingham, UK.",
+    "Contact Lulu Femme by email or Instagram about wholesale Lululemon bundles. Prepared in Pakistan · Shipping worldwide.",
   alternates: { canonical: "/contact" },
 };
 

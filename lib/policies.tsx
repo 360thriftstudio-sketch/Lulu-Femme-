@@ -58,12 +58,13 @@ export const bundlePolicies: AccordionItem[] = [
     content: (
       <>
         <p>
-          Bundles are dispatched from Birmingham, UK within 2 working days of payment. We ship
-          across the UK and internationally.
+          Prepared in Pakistan · Shipping worldwide. Bundles are dispatched from our studio within 2
+          working days of payment. We ship to the UK, Europe, the USA, the Middle East and beyond,
+          with tracking.
         </p>
         <p>
-          Buyers outside the UK may need to pay import duties and VAT on arrival. See our shipping
-          page for details.
+          Import duties or taxes may apply in your country and are paid by the buyer. See our
+          shipping page for details.
         </p>
       </>
     ),

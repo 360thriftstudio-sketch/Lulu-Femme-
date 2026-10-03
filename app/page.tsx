@@ -30,7 +30,7 @@ const steps = [
   {
     n: "03",
     title: "Pay and ship",
-    text: "Confirm your quote and pay, then we dispatch from Birmingham within 2 working days.",
+    text: "Confirm your quote and pay, then we pack and ship it worldwide with tracking.",
   },
 ];
 

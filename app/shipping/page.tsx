@@ -5,7 +5,7 @@ import { PageHeader, Section } from "@/components/PageHeader";
 export const metadata: Metadata = {
   title: "Shipping & delivery",
   description:
-    "Lulu Femme ships wholesale Lululemon bundles from Birmingham, UK within 2 working days. UK and international delivery options, duties and VAT.",
+    "Lulu Femme prepares wholesale Lululemon bundles in Pakistan and ships them worldwide within 2 working days. UK and international delivery options, duties and VAT.",
   alternates: { canonical: "/shipping" },
 };
 
@@ -76,7 +76,7 @@ export default function ShippingPage() {
       <PageHeader
         crumbs={[{ label: "Shipping" }]}
         title="Shipping"
-        intro="Every bundle is packed and dispatched from Birmingham, UK within 2 working days of payment."
+        intro="Prepared in Pakistan · Shipping worldwide. Every bundle is packed and dispatched from our studio within 2 working days of payment."
       />
       <Section title="Delivery options" id="options">
         <div className="flex flex-col gap-8">
@@ -84,11 +84,11 @@ export default function ShippingPage() {
           <ShipTable caption="International delivery" rows={intl} />
         </div>
       </Section>
-      <Section title="Duties & VAT for non-UK buyers" id="duties" className="container-site pb-12">
+      <Section title="Import duties & taxes" id="duties" className="container-site pb-12">
         <div className="prose-lf max-w-3xl rounded-2xl bg-blush p-6 text-ink">
           <p>
-            If you&apos;re outside the UK, your bundle may be charged import duties, VAT or customs
-            fees when it arrives. These are set by your country and are paid by the buyer – they
+            As we ship from Pakistan, your bundle may be charged import duties, VAT or customs fees
+            when it arrives. These are set by your country and are paid by the buyer – they
             aren&apos;t included in our prices or shipping costs.
           </p>
           <p>

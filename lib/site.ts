@@ -7,11 +7,11 @@ export const site = {
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : "http://localhost:3000"),
   description:
-    "Grade A pre-owned Lululemon sold wholesale in exact bundles for resellers. Every bundle is hand-authenticated and filmed. Based in Birmingham, UK.",
+    "Grade A pre-owned Lululemon sold wholesale in exact bundles for resellers. Every bundle is hand-authenticated and filmed. Prepared in Pakistan · Shipping worldwide.",
   email: "lulufemmee@gmail.com",
   instagramHandle: "lulufemmee",
   instagramUrl: "https://www.instagram.com/lulufemmee/",
-  location: "Birmingham, UK & Karachi, Pakistan",
+  location: "Prepared in Pakistan · Shipping worldwide",
   addresses: [
     {
       label: "United Kingdom",

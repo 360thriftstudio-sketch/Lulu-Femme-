@@ -56,7 +56,7 @@ export function Modal({
         if (e.target === ref.current) onClose();
       }}
       className={cn(
-        "m-0 max-h-none max-w-none bg-card p-0 text-ink backdrop:bg-black/50",
+        "pointer-events-auto m-0 max-h-none max-w-none bg-card p-0 text-ink backdrop:bg-black/50",
         variant === "center" &&
           "fixed top-1/2 left-1/2 w-[min(92vw,640px)] -translate-x-1/2 -translate-y-1/2 rounded-2xl",
         variant === "sheet" &&
