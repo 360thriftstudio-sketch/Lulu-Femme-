@@ -54,11 +54,11 @@ export function BundleCard({
         <ul className="flex flex-wrap gap-1.5" aria-label="Tags">
           {bundleTags(bundle).map((t) => (
             <li key={t}>
-              <Badge tone="blush">{t}</Badge>
+              <Badge tone={t.startsWith("Grade") ? "gold" : "blush"}>{t}</Badge>
             </li>
           ))}
           <li>
-            <Badge tone="blush">Premium</Badge>
+            <Badge tone="gold">Premium</Badge>
           </li>
         </ul>
         <p className="text-sm text-ink">{bundle.highlight}</p>

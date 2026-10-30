@@ -19,7 +19,7 @@ export function CtaBand({
           <p className="mt-2 max-w-xl">{text}</p>
         </div>
         <div className="flex flex-wrap gap-3">
-          <ButtonLink href={primary.href} variant="inverse">
+          <ButtonLink href={primary.href} variant="gold">
             {primary.label}
           </ButtonLink>
           <ButtonLink href={secondary.href} variant="inverseOutline">

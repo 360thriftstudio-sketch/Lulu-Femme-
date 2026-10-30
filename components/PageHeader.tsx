@@ -19,7 +19,7 @@ export function PageHeader({
       <div className="container-site flex flex-col gap-4 py-10 md:py-14">
         {crumbs && <Breadcrumbs items={[{ href: "/", label: "Home" }, ...crumbs]} />}
         {eyebrow && (
-          <p className="text-sm font-bold tracking-widest text-pink-ink uppercase">{eyebrow}</p>
+          <p className="text-sm font-bold tracking-widest text-sage uppercase">{eyebrow}</p>
         )}
         <h1 className="display text-4xl text-plum md:text-6xl">{title}</h1>
         {intro && <div className="max-w-2xl text-lg text-ink">{intro}</div>}

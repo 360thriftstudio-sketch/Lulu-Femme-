@@ -107,10 +107,10 @@ export default async function BundlePage({ params }: Props) {
                 <Badge tone="dark">{b.pieces} pieces</Badge>
               </li>
               <li>
-                <Badge tone="pink">Grade {b.grade} · Premium</Badge>
+                <Badge tone="gold">Grade {b.grade} · Premium</Badge>
               </li>
               <li>
-                <Badge tone="blush">Exact bundle</Badge>
+                <Badge tone="sage">Exact bundle</Badge>
               </li>
               <li>
                 <Badge tone="outline">{b.type}</Badge>

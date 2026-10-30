@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-type Tone = "pink" | "plum" | "blush" | "outline" | "dark";
+type Tone = "pink" | "plum" | "blush" | "outline" | "dark" | "gold" | "sage";
 
 const tones: Record<Tone, string> = {
   pink: "bg-pink text-on-pink",
@@ -9,6 +9,8 @@ const tones: Record<Tone, string> = {
   blush: "bg-blush text-plum",
   outline: "border border-line-strong text-ink bg-card",
   dark: "bg-ink text-offwhite",
+  gold: "bg-gold text-on-gold",
+  sage: "bg-sage text-on-sage",
 };
 
 export function Badge({

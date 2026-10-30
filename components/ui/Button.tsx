@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-type Variant = "primary" | "secondary" | "ghost" | "inverse" | "inverseOutline";
+type Variant = "primary" | "secondary" | "ghost" | "inverse" | "inverseOutline" | "gold";
 type Size = "md" | "sm";
 
 const base =
@@ -13,6 +13,8 @@ const variants: Record<Variant, string> = {
   ghost: "bg-transparent text-ink hover:bg-blush",
   /* For dark (plum) backgrounds */
   inverse: "bg-offwhite text-plum hover:bg-blush",
+  /* Grade A Gold: for the one standout action on burgundy bands */
+  gold: "bg-gold text-on-gold hover:bg-offwhite hover:text-plum",
   inverseOutline: "border-2 border-offwhite bg-transparent text-offwhite hover:bg-offwhite/10",
 };
 const sizes: Record<Size, string> = {

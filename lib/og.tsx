@@ -17,7 +17,7 @@ export async function brandOgImage(headline: string, subline: string) {
         flexDirection: "column",
         justifyContent: "center",
         padding: 80,
-        background: "#f7f1e8",
+        background: "#f4eee6",
         color: "#632d43",
       }}
     >
@@ -36,7 +36,7 @@ export async function brandOgImage(headline: string, subline: string) {
           bottom: 0,
           width: "100%",
           height: 16,
-          background: "#632d43",
+          background: "#c9a86a",
         }}
       />
     </div>,

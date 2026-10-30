@@ -98,7 +98,7 @@ export function BundleCarousel({ bundles, title }: { bundles: Bundle[]; title: s
     >
       <div className="container-site mb-5 flex flex-wrap items-end justify-between gap-3">
         <div>
-          <p className="text-xs font-bold tracking-widest text-pink-ink uppercase">The catalogue</p>
+          <p className="text-xs font-bold tracking-widest text-sage uppercase">The catalogue</p>
           <h2 id="catalogue-title" className="display text-3xl text-plum md:text-5xl">
             {title}
           </h2>

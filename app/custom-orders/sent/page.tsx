@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function CustomSentPage() {
   return (
     <section className="container-site flex flex-col items-start gap-5 py-20">
-      <p className="text-sm font-bold tracking-widest text-pink-ink uppercase">Request sent</p>
+      <p className="text-sm font-bold tracking-widest text-sage uppercase">Request sent</p>
       <h1 className="display text-5xl text-plum md:text-6xl">Thank you!</h1>
       <p className="max-w-xl text-lg text-ink">
         We&apos;ve got your custom order request and will be in touch by email soon. [EDIT]

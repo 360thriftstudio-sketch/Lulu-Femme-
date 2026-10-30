@@ -27,7 +27,7 @@ export interface HeroBannerProps {
  * Full-width hero. Art-directed <picture>: the browser downloads only the
  * image for the current screen (desktop ≥768px, mobile below).
  * Mobile shows a small headline and the buttons; desktop adds the subline.
- * Burgundy text on a soft ivory fade so it stays readable on the photo.
+ * Burgundy text on a soft oat fade so it stays readable on the photo.
  * Built as a single slide so it can later be wrapped in a slider.
  */
 export function HeroBanner({
@@ -70,7 +70,7 @@ export function HeroBanner({
       {/* Soft cream fade behind the text: from the bottom on mobile, from the left on desktop */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-[5] bg-[linear-gradient(0deg,rgba(247,241,232,0.97)_0%,rgba(247,241,232,0.92)_32%,rgba(247,241,232,0)_58%)] md:bg-[linear-gradient(90deg,rgba(247,241,232,0.94)_0px,rgba(247,241,232,0.88)_620px,rgba(247,241,232,0)_950px)] lg:bg-[linear-gradient(90deg,rgba(247,241,232,0.94)_0px,rgba(247,241,232,0.88)_780px,rgba(247,241,232,0)_1150px)]"
+        className="absolute inset-0 -z-[5] bg-[linear-gradient(0deg,rgba(244,238,230,0.97)_0%,rgba(244,238,230,0.92)_32%,rgba(244,238,230,0)_58%)] md:bg-[linear-gradient(90deg,rgba(244,238,230,0.94)_0px,rgba(244,238,230,0.88)_620px,rgba(244,238,230,0)_950px)] lg:bg-[linear-gradient(90deg,rgba(244,238,230,0.94)_0px,rgba(244,238,230,0.88)_780px,rgba(244,238,230,0)_1150px)]"
       />
 
       <div className="absolute inset-x-0 bottom-0 pb-6 md:pb-16 lg:pb-20">
