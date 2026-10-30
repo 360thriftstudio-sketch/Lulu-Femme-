@@ -1,47 +1,48 @@
 @import "tailwindcss";
 
-/* ---------------------------------------------------------------
-   Lulu Femme design tokens
-   Light values first, dark-mode versions under prefers-color-scheme.
----------------------------------------------------------------- */
+/* Atelier Burgundy theme (see docs/brand). Token names are kept from the
+   original build so components didn't change: "pink" now means the primary
+   burgundy. No pink is used in the UI; only the logo files are pink. */
 :root {
-  --pink: #e3165b; /* main accent, buttons (white text 4.63:1) */
-  --pink-hover: #c8104f;
-  --pink-ink: #c8104f; /* pink text on blush/tinted areas (4.89:1) */
-  --on-pink: #ffffff;
-  --plum: #8e2550; /* headings, labels */
-  --ink: #2a1320; /* body text */
-  --muted: #6b5560; /* secondary text */
-  --blush: #fce7ef; /* tinted sections */
-  --offwhite: #fcfef1; /* page background */
-  --card: #ffffff;
-  --line: #ecdde4;
-  --line-strong: #8a7280; /* form borders, 3:1 non-text contrast */
-  --success: #17663a;
-  --danger: #b3123f;
-  --header-bg: rgb(255 255 255 / 0.85);
-  --shadow: 0 6px 24px -12px rgb(42 19 32 / 0.25);
+  --pink: #632d43; /* primary: buttons, active states (ivory text 9.4:1) */
+  --pink-hover: #4e2235;
+  --pink-ink: #632d43; /* accent text on ivory / blush (9.4:1 / 7.6:1) */
+  --on-pink: #f7f1e8;
+  --plum: #632d43; /* headings, labels */
+  --ink: #2b1a21; /* body text */
+  --muted: #6e5a61; /* secondary text */
+  --blush: #ead6d9; /* tinted sections */
+  --rose: #bc8a95; /* decorative only, never text */
+  --offwhite: #f7f1e8; /* ivory page background */
+  --card: #fffdf9;
+  --line: #e2d2cd;
+  --line-strong: #8c7480; /* form borders, 3:1 non-text contrast */
+  --success: #2f6b4a;
+  --danger: #a3123a;
+  --header-bg: rgb(255 253 249 / 0.88);
+  --shadow: 0 10px 30px -18px rgb(43 26 33 / 0.35);
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --pink: #ff5c8f;
-    --pink-hover: #ff7aa4;
-    --pink-ink: #ff7aa4;
-    --on-pink: #1a0d14;
-    --plum: #f3a6c3;
-    --ink: #f6eaf0;
-    --muted: #c9b3be;
-    --blush: #2a1822;
-    --offwhite: #1a0d14;
-    --card: #24141d;
-    --line: #3d2a34;
-    --line-strong: #9a8290;
-    --success: #6fd49a;
-    --danger: #ff8fb0;
-    --header-bg: rgb(26 13 20 / 0.85);
-    --shadow: 0 6px 24px -12px rgb(0 0 0 / 0.6);
+    --pink: #e7b3c3;
+    --pink-hover: #f0c7d3;
+    --pink-ink: #e7b3c3;
+    --on-pink: #2b1a21;
+    --plum: #e7b3c3;
+    --ink: #f5ece6;
+    --muted: #c8b4bb;
+    --blush: #3a2530;
+    --rose: #8a5a67;
+    --offwhite: #1a1014;
+    --card: #241820;
+    --line: #3b2a31;
+    --line-strong: #8a7480;
+    --success: #7fd3a6;
+    --danger: #ff8fae;
+    --header-bg: rgb(26 16 20 / 0.88);
+    --shadow: 0 10px 30px -18px rgb(0 0 0 / 0.6);
     color-scheme: dark;
   }
 }
@@ -55,6 +56,7 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-blush: var(--blush);
+  --color-rose: var(--rose);
   --color-offwhite: var(--offwhite);
   --color-card: var(--card);
   --color-line: var(--line);
@@ -62,8 +64,8 @@
   --color-success: var(--success);
   --color-danger: var(--danger);
 
-  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-anton), Impact, "Arial Narrow", sans-serif;
+  --font-sans: var(--font-manrope), Manrope, ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Garamond, "Times New Roman", serif;
 
   --shadow-soft: var(--shadow);
 }
@@ -110,9 +112,12 @@ body {
   }
   .display {
     font-family: var(--font-display);
-    text-transform: uppercase;
-    letter-spacing: 0.01em;
-    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.08;
+    text-wrap: balance;
+    /* Cormorant defaults to old-style figures, which make "10" read like "IO" */
+    font-variant-numeric: lining-nums;
   }
   .prose-lf p {
     margin-block: 0.75rem;

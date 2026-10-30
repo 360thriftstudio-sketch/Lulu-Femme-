@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Anton, Figtree } from "next/font/google";
+import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { Footer } from "@/components/layout/Footer";
@@ -9,13 +9,14 @@ import { Providers } from "@/components/providers/Providers";
 import { site } from "@/lib/site";
 import "./globals.css";
 
-const anton = Anton({
-  weight: "400",
+const cormorant = Cormorant_Garamond({
+  weight: ["500", "600"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
-  variable: "--font-anton",
+  variable: "--font-cormorant",
   display: "swap",
 });
-const figtree = Figtree({ subsets: ["latin"], variable: "--font-figtree", display: "swap" });
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -37,8 +38,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fcfef1" },
-    { media: "(prefers-color-scheme: dark)", color: "#1a0d14" },
+    { media: "(prefers-color-scheme: light)", color: "#f7f1e8" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1014" },
   ],
 };
 
@@ -70,7 +71,7 @@ const organization = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-GB" className={`${anton.variable} ${figtree.variable}`}>
+    <html lang="en-GB" className={`${cormorant.variable} ${manrope.variable}`}>
       <body className="relative min-h-dvh">
         {/* Marker 60px down the page; the header watches it with an IntersectionObserver. */}
         <div

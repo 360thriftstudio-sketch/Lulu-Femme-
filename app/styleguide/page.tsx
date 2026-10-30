@@ -10,52 +10,66 @@ export const metadata: Metadata = {
 };
 
 const colours = [
-  { name: "Pink", token: "--pink", light: "#E3165B", dark: "#FF5C8F", use: "Main accent, buttons" },
   {
-    name: "Pink ink",
+    name: "Deep burgundy",
+    token: "--pink",
+    light: "#632D43",
+    dark: "#E7B3C3",
+    use: "Primary: buttons, active states",
+  },
+  {
+    name: "Burgundy hover",
+    token: "--pink-hover",
+    light: "#4E2235",
+    dark: "#F0C7D3",
+    use: "Primary hover",
+  },
+  {
+    name: "Accent text",
     token: "--pink-ink",
-    light: "#C8104F",
-    dark: "#FF7AA4",
-    use: "Pink text on tinted areas",
+    light: "#632D43",
+    dark: "#E7B3C3",
+    use: "Links and accent text",
   },
-  { name: "Plum", token: "--plum", light: "#8E2550", dark: "#F3A6C3", use: "Headings, labels" },
-  { name: "Ink", token: "--ink", light: "#2A1320", dark: "#F6EAF0", use: "Body text" },
-  { name: "Muted", token: "--muted", light: "#6B5560", dark: "#C9B3BE", use: "Secondary text" },
+  { name: "Headings", token: "--plum", light: "#632D43", dark: "#E7B3C3", use: "Headings, labels" },
+  { name: "Ink", token: "--ink", light: "#2B1A21", dark: "#F5ECE6", use: "Body text" },
   {
-    name: "Soft blush",
-    token: "--blush",
-    light: "#FCE7EF",
-    dark: "#2A1822",
-    use: "Tinted sections",
+    name: "Mauve grey",
+    token: "--muted",
+    light: "#6E5A61",
+    dark: "#C8B4BB",
+    use: "Secondary text",
   },
+  { name: "Blush", token: "--blush", light: "#EAD6D9", dark: "#3A2530", use: "Tinted sections" },
   {
-    name: "Off-white",
-    token: "--offwhite",
-    light: "#FCFEF1",
-    dark: "#1A0D14",
-    use: "Page background",
+    name: "Muted rose",
+    token: "--rose",
+    light: "#BC8A95",
+    dark: "#8A5A67",
+    use: "Decorative only, never text",
   },
-  { name: "Card", token: "--card", light: "#FFFFFF", dark: "#24141D", use: "Cards" },
-  { name: "Line", token: "--line", light: "#ECDDE4", dark: "#3D2A34", use: "Dividers, borders" },
+  { name: "Ivory", token: "--offwhite", light: "#F7F1E8", dark: "#1A1014", use: "Page background" },
+  { name: "Warm white", token: "--card", light: "#FFFDF9", dark: "#241820", use: "Cards" },
+  { name: "Linen", token: "--line", light: "#E2D2CD", dark: "#3B2A31", use: "Dividers, borders" },
   {
-    name: "Line strong",
+    name: "Field line",
     token: "--line-strong",
-    light: "#8A7280",
-    dark: "#9A8290",
+    light: "#8C7480",
+    dark: "#8A7480",
     use: "Form borders (3:1)",
   },
 ];
 
 const type = [
-  { cls: "display text-7xl", label: "Display XL · Anton 72" },
-  { cls: "display text-5xl", label: "Display L · Anton 48" },
-  { cls: "display text-3xl", label: "Display M · Anton 30" },
-  { cls: "text-2xl font-bold", label: "Heading · Figtree 24 bold" },
-  { cls: "text-xl font-bold", label: "Subheading · Figtree 20 bold" },
-  { cls: "text-lg", label: "Lead · Figtree 18" },
-  { cls: "text-base", label: "Body · Figtree 16" },
-  { cls: "text-sm", label: "Small · Figtree 14" },
-  { cls: "text-xs", label: "Caption · Figtree 12" },
+  { cls: "display text-7xl", label: "Display XL · Cormorant Garamond 600, 72" },
+  { cls: "display text-5xl", label: "Display L · Cormorant Garamond 600, 48" },
+  { cls: "display text-3xl", label: "Display M · Cormorant Garamond 600, 30" },
+  { cls: "text-2xl font-bold", label: "Heading · Manrope 24 bold" },
+  { cls: "text-xl font-bold", label: "Subheading · Manrope 20 bold" },
+  { cls: "text-lg", label: "Lead · Manrope 18" },
+  { cls: "text-base", label: "Body · Manrope 16" },
+  { cls: "text-sm", label: "Small · Manrope 14" },
+  { cls: "text-xs", label: "Caption · Manrope 12" },
 ];
 
 export default function StyleguidePage() {
@@ -94,8 +108,10 @@ export default function StyleguidePage() {
             </li>
           ))}
           <li className="flex flex-col gap-1">
-            <span className="text-xs font-semibold text-muted">Bundle code · Anton</span>
-            <span className="display text-4xl text-pink-ink">LF-01</span>
+            <span className="text-xs font-semibold text-muted">Bundle code · Manrope bold</span>
+            <span className="text-4xl font-bold tracking-[0.06em] text-pink-ink tabular-nums">
+              LF-01
+            </span>
           </li>
         </ul>
       </Section>

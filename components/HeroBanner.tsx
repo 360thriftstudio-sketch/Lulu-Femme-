@@ -27,7 +27,7 @@ export interface HeroBannerProps {
  * Full-width hero. Art-directed <picture>: the browser downloads only the
  * image for the current screen (desktop ≥768px, mobile below).
  * Mobile shows a small headline and the buttons; desktop adds the subline.
- * Text is pink on a soft cream fade so it stays readable on the photo.
+ * Burgundy text on a soft ivory fade so it stays readable on the photo.
  * Built as a single slide so it can later be wrapped in a slider.
  */
 export function HeroBanner({
@@ -70,7 +70,7 @@ export function HeroBanner({
       {/* Soft cream fade behind the text: from the bottom on mobile, from the left on desktop */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-[5] bg-[linear-gradient(0deg,rgba(252,254,241,0.97)_0%,rgba(252,254,241,0.92)_32%,rgba(252,254,241,0)_58%)] md:bg-[linear-gradient(90deg,rgba(252,254,241,0.94)_0px,rgba(252,254,241,0.88)_620px,rgba(252,254,241,0)_950px)] lg:bg-[linear-gradient(90deg,rgba(252,254,241,0.94)_0px,rgba(252,254,241,0.88)_780px,rgba(252,254,241,0)_1150px)]"
+        className="absolute inset-0 -z-[5] bg-[linear-gradient(0deg,rgba(247,241,232,0.97)_0%,rgba(247,241,232,0.92)_32%,rgba(247,241,232,0)_58%)] md:bg-[linear-gradient(90deg,rgba(247,241,232,0.94)_0px,rgba(247,241,232,0.88)_620px,rgba(247,241,232,0)_950px)] lg:bg-[linear-gradient(90deg,rgba(247,241,232,0.94)_0px,rgba(247,241,232,0.88)_780px,rgba(247,241,232,0)_1150px)]"
       />
 
       <div className="absolute inset-x-0 bottom-0 pb-6 md:pb-16 lg:pb-20">
@@ -78,11 +78,11 @@ export function HeroBanner({
           <div className="md:max-w-[500px] lg:max-w-[620px]">
             <h1
               id="hero-title"
-              className="hero-fade text-[1.75rem] leading-[1.05] font-bold tracking-[-0.03em] text-[#E3165B] md:text-[3.25rem] md:leading-[1.02] lg:text-[4.5rem]"
+              className="hero-fade font-display text-[1.75rem] leading-[1.05] font-semibold tracking-[-0.01em] text-[#632D43] md:text-[3.25rem] md:leading-[1.02] lg:text-[4.5rem]"
             >
               {headline}
             </h1>
-            <p className="hero-fade hero-delay-1 mt-4 hidden text-2xl leading-snug font-medium text-[#C8104F] md:block">
+            <p className="hero-fade hero-delay-1 mt-4 hidden text-2xl leading-snug font-medium text-[#2B1A21] md:block">
               {subline}
             </p>
             <div className="hero-fade hero-delay-2 mt-4 flex flex-wrap gap-2.5 md:mt-8 md:gap-3">
@@ -90,7 +90,7 @@ export function HeroBanner({
                 <Link
                   key={b.href}
                   href={b.href}
-                  className="btn-fill inline-flex h-11 items-center rounded-full border-2 border-[#E3165B] bg-[#FBF7F8] px-5 text-sm font-semibold text-[#2A1320] md:h-12 md:px-7 md:text-base"
+                  className="btn-fill inline-flex h-11 items-center rounded-full border-2 border-[#632D43] bg-[#FFFDF9] px-5 text-sm font-semibold text-[#632D43] md:h-12 md:px-7 md:text-base"
                 >
                   {b.label}
                 </Link>

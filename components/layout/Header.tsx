@@ -90,7 +90,7 @@ export function Header() {
                     href={item.href}
                     aria-current={isActive(item.href) ? "page" : undefined}
                     className={cn(
-                      "inline-flex min-h-11 items-center rounded-full px-3 text-[0.95rem] font-medium hover:text-pink-ink",
+                      "inline-flex min-h-11 items-center rounded-full px-2.5 text-[0.9rem] font-medium whitespace-nowrap hover:text-pink-ink",
                       isActive(item.href)
                         ? "text-pink-ink underline underline-offset-8"
                         : "text-ink",

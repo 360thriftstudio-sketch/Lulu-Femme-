@@ -20,14 +20,14 @@ export function Badge({
   children: ReactNode;
   tone?: Tone;
   className?: string;
-  /** Use the Anton display font (for bundle codes). */
+  /** Bundle-code style: bold, tracked, tabular figures. */
   display?: boolean;
 }) {
   return (
     <span
       className={cn(
         "inline-flex items-center rounded-full px-2.5 py-1 text-xs leading-none font-semibold",
-        display && "display text-[0.8rem] font-normal tracking-wide",
+        display && "font-bold tracking-[0.06em] tabular-nums",
         tones[tone],
         className,
       )}

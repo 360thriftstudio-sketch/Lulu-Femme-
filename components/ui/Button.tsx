@@ -6,7 +6,7 @@ type Variant = "primary" | "secondary" | "ghost" | "inverse" | "inverseOutline";
 type Size = "md" | "sm";
 
 const base =
-  "inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-full font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60";
+  "inline-flex min-h-11 min-w-11 items-center justify-center gap-2 whitespace-nowrap rounded-full font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60";
 const variants: Record<Variant, string> = {
   primary: "bg-pink text-on-pink hover:bg-pink-hover",
   secondary: "btn-fill border-2 border-pink bg-transparent text-pink-ink",

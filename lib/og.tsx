@@ -17,18 +17,18 @@ export async function brandOgImage(headline: string, subline: string) {
         flexDirection: "column",
         justifyContent: "center",
         padding: 80,
-        background: "#fcfef1",
-        color: "#8e2550",
+        background: "#f7f1e8",
+        color: "#632d43",
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element -- ImageResponse needs a plain img */}
       <img src={src} width={160} height={125} alt="" />
       <div
-        style={{ fontSize: 72, fontWeight: 800, marginTop: 40, lineHeight: 1.05, color: "#8e2550" }}
+        style={{ fontSize: 72, fontWeight: 800, marginTop: 40, lineHeight: 1.05, color: "#632d43" }}
       >
         {headline}
       </div>
-      <div style={{ fontSize: 32, marginTop: 24, color: "#2a1320" }}>{subline}</div>
+      <div style={{ fontSize: 32, marginTop: 24, color: "#2b1a21" }}>{subline}</div>
       <div
         style={{
           position: "absolute",
@@ -36,7 +36,7 @@ export async function brandOgImage(headline: string, subline: string) {
           bottom: 0,
           width: "100%",
           height: 16,
-          background: "#e3165b",
+          background: "#632d43",
         }}
       />
     </div>,
